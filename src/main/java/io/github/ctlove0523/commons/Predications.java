@@ -8,4 +8,11 @@ public class Predications {
 		}
 		return str;
 	}
+
+	public static int checkNetworkPort(int port, String message) {
+		if (port < 0 || port > 65535) {
+			throw new IllegalArgumentException(message);
+		}
+		return port;
+	}
 }
